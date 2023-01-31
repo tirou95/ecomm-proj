@@ -10,14 +10,15 @@ export const cartData = (data = [], action) => {
             return [action.data, ...data];
         case REMOVE_TO_CART:
             console.warn("Remove to Cart")
-            data.length = data.length - 1;
-            return [...data];
+            //data.length = data.length? data.length - 1 : [];
+            const remainingItems = data.filter((item) => item.id !== action.data)
+            return [...remainingItems];
         case EMPTY_TO_CART:
             console.warn("Remove to Cart")
             data = [];
             return [...data];
         default:
-            return [];
+            return data;
 
     }
 }

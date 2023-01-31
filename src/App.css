@@ -62,3 +62,15 @@
   right: 0px;
   color: #fff;
 }
+
+/* product UI style */
+.product-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-item{
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px;
+}
